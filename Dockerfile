@@ -1,4 +1,4 @@
-FROM comicrelief/php7-base
+FROM comicrelief/php-base:7.1
 
 RUN a2ensite symfony ; apt-get update \
   ; apt-get install -y --fix-missing libxml2-dev mysql-client \
@@ -11,7 +11,7 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
 
 #Platform.sh
 RUN curl -sS https://platform.sh/cli/installer | php
-RUN source ~/.bashrc
+RUN export PATH="/root/.platformsh/bin:$PATH"
 
 # Install phing & drush
 RUN composer global config bin-dir /usr/local/bin \
