@@ -11,10 +11,11 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
 
 #Platform.sh
 RUN curl -sS https://platform.sh/cli/installer | php
+RUN source ~/.bashrc
 
 # Install phing & drush
 RUN composer global config bin-dir /usr/local/bin \
-  ; composer global require phing/phing:2.15 drush/drush
+  ; composer global require drush/drush
 
 # FE tool
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - \
