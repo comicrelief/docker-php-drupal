@@ -18,6 +18,5 @@ RUN composer global config bin-dir /usr/local/bin \
   ; composer global require drush/drush
 
 # FE tool
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - \
- ; apt-get install -y nodejs ruby ruby-dev ; npm install -g grunt-cli \
- ; gem install bundler compass ; bundle config --global jobs 8
+RUN curl -sL https://deb.nodesource.com/setup_7.x | bash - \
+ ; apt-get install -y nodejs ; npm install -g grunt-cli
