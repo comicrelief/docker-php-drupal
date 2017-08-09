@@ -19,7 +19,7 @@ RUN composer global config bin-dir /usr/local/bin \
 
 # FE tool
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - \
- ; apt-get install -y nodejs ; npm install -g grunt-cli
+ ; apt-get install -y nodejs ; npm install -g grunt-cli ; npm install -g yarn 
 
 # Install AWS CLI
 RUN curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | python; pip install awscli
