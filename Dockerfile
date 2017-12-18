@@ -1,6 +1,6 @@
 FROM comicrelief/php-base:7.1
 
-RUN a2ensite symfony ; apt-get update \
+RUN a2ensite web ; apt-get update \
   ; apt-get install -y --fix-missing libxml2-dev mysql-client \
   libpng12-dev libjpeg62-turbo-dev libfreetype6-dev imagemagick libmagick++-dev
 
